@@ -1,0 +1,61 @@
+body {
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.title h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.title h2 {
+    font-size: 24px;
+    color: #006EB6;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+main p em {
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.does-list {
+    text-align: left;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.does-list li {
+    margin-bottom: 15px;
+}
+
+footer .logo {
+    width: 150px;
+    margin-top: 30px;
+}
