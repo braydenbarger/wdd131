@@ -12,4 +12,6 @@ function changeTheme() {
     }
 }
 
+changeTheme();
+
 themeSelector.addEventListener('change', changeTheme);
