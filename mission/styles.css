@@ -68,3 +68,15 @@ body.dark {
 body.dark .title h2 {
     color: #00AEEF;
 }
+
+.logo.dark-logo {
+	display: none;
+}
+
+body.dark .logo.light-logo {
+	display: none;
+}
+
+body.dark .logo.dark-logo {
+	display: inline;
+}

@@ -2,7 +2,8 @@
 
 :root {
   --primary-color: #22577a;
-  --text-color: #22577a;
+  --text-dark: #22577a;
+  --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
   --secondary-font: "Mooli", sans-serif;
 }
@@ -11,7 +12,7 @@ body {
   font-family: var(--primary-font);
   font-size: 1.2em;
   margin: 0;
-  color: var(--text-color);
+  color: var(--text-dark);
   text-align: center;
 }
 
