@@ -50,27 +50,39 @@ main {
   display: grid;
   grid-template-columns: 150px 5px 1fr;
   gap: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #EFC69B;
+}
+
+.book-details {
+  text-align: right;
 }
 
 .book-details time {
   font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
   display: block;
+}
+
+.book-details p {
+  margin: 2px 0;
 }
 
 .divider {
   width: 1px;
   background-color: #EFC69B;
+  margin: 0 10px;
 }
 
-.book { border: none; }
+.book-content h2 {
+  margin-top: 0;
+}
 
 .book-content img {
   max-width: 180px;
   display: block;
   margin: 10px auto;
-  display: block;
 }
 
 .filters {
@@ -84,7 +96,3 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
- .book-details {
-    text-align: right;
- } 
