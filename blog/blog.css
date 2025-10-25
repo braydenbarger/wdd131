@@ -52,6 +52,7 @@ main {
   gap: 15px;
   padding-bottom: 30px;
   border-bottom: 1px solid #EFC69B;
+  margin-bottom: 40px;
 }
 
 .book-details {
