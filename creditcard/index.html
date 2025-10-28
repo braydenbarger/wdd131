@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Credit card form project for WDD 131." />
+  <meta name="author" content="Brayden Barger" />
+  <title>Credit Card Payment</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>CREDIT CARD PAYMENT</h1>
+
+  <main class="form-wrapper">
+    <form>
+      <div class="card-area">
+        <div class="card front">
+          <p class="total">TOTAL: $199</p>
+
+          <label for="card-number">CARD NUMBER</label>
+          <input type="text" id="card-number" placeholder="1234 5678 9101 1020" required />
+
+          <div class="bottom-row">
+            <div>
+              <label for="card-holder">CARD HOLDER</label>
+              <input type="text" id="card-holder" placeholder="John Doe" required />
+            </div>
+            <div>
+              <label for="exp-month">EXPIRATION</label>
+              <div class="exp-group">
+                <input type="text" id="exp-month" placeholder="MM" required pattern="\d{2}" />
+                <input type="text" id="exp-year" placeholder="YY" required pattern="\d{2}" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card back">
+          <div class="black-bar"></div>
+          <div class="cvv-section">
+            <label for="cvv">CVC/CVV</label>
+            <input type="text" id="cvv" placeholder="XXX" required pattern="\d{3,4}" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
