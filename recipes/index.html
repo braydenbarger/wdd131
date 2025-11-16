@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RecipeBook</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple, responsive recipe book where you can search and explore tasty recipes." />
+  <meta name="author" content="Brayden Barger" />
+
+  <link rel="icon" href="images/recipe-book.png" type="image/png" />
+
+  <meta property="og:title" content="RecipeBook" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Search and explore recipes from a simple recipe book." />
+  <meta property="og:image" content="https://braydenbarger.github.io/wdd131/recipes/images/recipe-book.png" />
+  <meta property="og:url" content="https://braydenbarger.github.io/wdd131/recipes" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="recipes.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="branding">
+      <img src="images/recipe-book.png" alt="Recipe book logo" class="logo" />
+      <h1 class="site-title">RecipeBook</h1>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <form id="search-form" class="search-form" role="search" aria-label="Find a recipe">
+      <label class="visually-hidden" for="search-input">Find a recipe</label>
+      <div class="search-wrapper">
+        <input
+          id="search-input"
+          name="query"
+          type="search"
+          placeholder="Find a recipe"
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Search">
+          &#128269;
+        </button>
+      </div>
+    </form>
+
+    <article class="recipe-card" aria-live="polite">
+      <div class="recipe-image-wrap">
+        <img
+          id="recipe-image"
+          src="images/apple-crisp.jpg"
+          alt="Apple Crisp in a bowl with ice cream on top"
+        />
+      </div>
+
+      <div class="recipe-info">
+        <span class="recipe-tag" id="recipe-tag">dessert</span>
+
+        <h2 class="recipe-title">
+          <span id="recipe-title">Apple Crisp</span>
+        </h2>
+
+        <p class="recipe-rating" id="recipe-rating">
+        </p>
+
+        <p class="recipe-description" id="recipe-description">
+          This apple crisp recipe is a simple yet delicious fall dessert that's
+          great served warm with vanilla ice cream.
+        </p>
+      </div>
+
+      <p class="no-results" id="no-results" hidden>
+        No recipe found. Try searching for <strong>dessert</strong>,
+        <strong>chicken</strong>, or <strong>rice</strong>.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p class="attribution">
+      <a
+        href="https://www.flaticon.com/free-icons/recipe"
+        title="recipe icons"
+      >
+        Recipe icons created by Freepik - Flaticon
+      </a>
+    </p>
+
+    <div class="social">
+      <a href="#" aria-label="Instagram">
+        <img src="images/instagram_icon.svg" alt="" />
+      </a>
+      <a href="#" aria-label="YouTube">
+        <img src="images/youtube_icon.svg" alt="" />
+      </a>
+      <a href="#" aria-label="Pinterest">
+        <img src="images/pinterest_icon.svg" alt="" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
