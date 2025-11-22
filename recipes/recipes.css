@@ -216,6 +216,14 @@ img {
   height: 18px;
 }
 
+.recipe-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.35rem;
+}
+
 @media (min-width: 700px) {
   .recipe-card {
     flex-direction: row;
