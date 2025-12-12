@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brayden Barger">
+    <meta name="description" content="Golf tracking site">
+    <title>Golf Tracker</title>
+    <link rel="stylesheet" href="/golf-tracker/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-brand" id="header-brand">
+            <div class="logo">
+                <img src="/golf-tracker/photos/logo.png" alt="Golf Tracker Logo">
+            </div>
+            <h1>Golf Tracker</h1>
+        </div>
+        <nav>
+            <a href="#" id="nav-add">Add Round</a>
+            <a href="#" id="nav-history">History</a>
+            <a href="#" id="nav-stats">Stats</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="home-page" class="page active">
+            <div class="hero-section">
+                <h2>Track Your Golf Game</h2>
+                <p class="hero-text">
+                    Welcome to Golf Tracker! Keep track of your rounds, view your progress, and see your club performance. Record each round you play to see your improvement over time and log your driving range practice sessions to track distance gains.
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📊 Rounds Played</h3>
+                        <p>
+                            Record each round by entering the course name, holes played, your score, and date to track your best scores.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>🏌️ Driving Range</h3>
+                        <p>
+                            Log practice sessions with club type and distance. View your driving range stats and track improvements in your game.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="add-page" class="page">
+            <div class="content-container">
+                <h2>Add Your Data</h2>
+                
+                <div class="form-section">
+                    <h3>Add Round</h3>
+                    <button id="show-round-form" class="btn-primary">+ Add New Round</button>
+                    
+                    <form id="round-form" class="hidden">
+                        <input type="text" id="course-name" placeholder="Course Name" required>
+                        <select id="holes">
+                            <option value="9">9 Holes</option>
+                            <option value="18">18 Holes</option>
+                        </select>
+                        <input type="number" id="score" placeholder="Score" required>
+                        <input type="date" id="date" required>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-primary">Save Round</button>
+                            <button type="button" id="cancel-round" class="btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="form-section">
+                    <h3>Add Club Distance</h3>
+                    <button id="show-club-form" class="btn-primary">+ Add Club Distance</button>
+                    
+                    <form id="club-form" class="hidden">
+                        <select id="club-type" required>
+                            <option value="">Select Club</option>
+                            <option value="Driver">Driver</option>
+                            <option value="3 Wood">3 Wood</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="6 Iron">6 Iron</option>
+                            <option value="7 Iron">7 Iron</option>
+                            <option value="8 Iron">8 Iron</option>
+                            <option value="9 Iron">9 Iron</option>
+                            <option value="Pitching Wedge">Pitching Wedge</option>
+                            <option value="Sand Wedge">Sand Wedge</option>
+                        </select>
+                        <input type="number" id="distance" placeholder="Distance (yards)" required>
+                        <input type="date" id="club-date" required>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-primary">Save Distance</button>
+                            <button type="button" id="cancel-club" class="btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="history-page" class="page">
+            <div class="content-container">
+                <h2>Round History</h2>
+                <div id="rounds-list"></div>
+
+                <h2 class="section-header">Club Distance History</h2>
+                <div id="clubs-list"></div>
+            </div>
+        </div>
+
+        <div id="stats-page" class="page">
+            <div class="content-container">
+                <h2>Round Stats</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Best Round (18 holes):</h3>
+                        <div id="best-18"></div>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>Best Round (9 holes):</h3>
+                        <div id="best-9"></div>
+                    </div>
+                </div>
+
+                <h2 class="section-header">Club Stats</h2>
+                <div id="club-stats" class="club-stats-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Golf Tracker</h3>
+        <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
